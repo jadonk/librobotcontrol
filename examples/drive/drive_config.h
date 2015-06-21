@@ -60,7 +60,12 @@
 	X(float,  "%f", motor_max, 				1.0		) \
 	X(float,  "%f", torque_vec_const, 		0.2		) \
 	\
-	X(float,  "%f", v_nominal, 				7.4		)
+	X(float,  "%f", v_nominal, 				7.4		) \
+	\
+	X(int,    "%d", orientation_rate,		50		) \
+	X(float,  "%f", det_time,				0.3		) \
+	X(float,  "%f", det_poss_time,			0.1 	) \
+	X(float,  "%f", orient_tolerance,		30	) 
 
   
  
