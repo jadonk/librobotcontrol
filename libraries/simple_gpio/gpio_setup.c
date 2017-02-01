@@ -7,16 +7,16 @@
 int setup_output_pin(int pin, int val){
 
 	if(gpio_export(pin)){
-		printf("ERROR: Failed to export gpio pin %d\n", pin);
-		return -1;
+		printf("WARNING: Failed to export gpio pin %d\n", pin);
+		//return -1;
 	}
 	if(gpio_set_dir(pin, OUTPUT_PIN)){
-		printf("ERROR: Failed to set gpio pin %d as output\n", pin);
-		return -1;
+		printf("WARNING: Failed to set gpio pin %d as output\n", pin);
+		//return -1;
 	}
 	if(gpio_set_value(pin, val)){
-		printf("ERROR: Failed to set gpio pin %d value\n", pin);
-		return -1;
+		printf("WARNING: Failed to set gpio pin %d value\n", pin);
+		//return -1;
 	}
 	return 0;
 }
