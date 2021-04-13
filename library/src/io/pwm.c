@@ -26,6 +26,9 @@
 #define OCP_DIR "/sys/devices/platform/ocp/4830%d000.epwmss/4830%d200.pwm/pwm"
 #define OCP_OFFSET	66
 
+// BBAI support
+#define PWM2AI(x) (x=1?3:(x=2?2:-1)) 	//-1 indicates pwm pin unavailable in the AI
+
 // preposessor macros
 #define unlikely(x)	__builtin_expect (!!(x), 0)
 
